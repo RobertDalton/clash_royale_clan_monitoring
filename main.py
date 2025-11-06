@@ -73,7 +73,7 @@ if st.button("Check Statistics"):
         with col2:
             st.markdown("## 🏆 **Top 16 Players Leaderboard**")
             st.markdown("<br>", unsafe_allow_html=True)
-            df_best= df.sort_values(by='War Points', ascending=True).reset_index(drop=True)
+            df_best= df.sort_values(by='War Points', ascending=False).reset_index(drop=True)
             st.dataframe(df_best.head(16))
         
         col3, col4 = st.columns(2)
